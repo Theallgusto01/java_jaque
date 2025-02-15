@@ -1,0 +1,35 @@
+
+CREATE DATABASE projetojava;
+USE projetojava;
+
+
+CREATE TABLE aluno (
+    matricula INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    cpf VARCHAR(14),
+    dataNascimento DATE,
+    foto LONGBLOB
+);
+
+
+CREATE TABLE professor (
+    matricula INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    foto LONGBLOB
+);
+
+
+INSERT INTO aluno (nome, cpf, dataNascimento, foto) VALUES
+('Leonardo DiCaprio', '12345678901', '1974-11-11', NULL),
+('Scarlett Johansson', '98765432100', '1984-11-22', NULL),
+('Morgan Freeman', '45678912302', '1937-06-01', NULL),
+('Natalie Portman', '32165498700', '1981-06-09', NULL),
+('Robert Downey Jr.', '65412398700', '1965-04-04', NULL);
+
+
+INSERT INTO professor (nome, foto) VALUES
+('Albert Einstein', NULL),
+('Marie Curie', NULL),
+('Isaac Newton', NULL),
+('Nikola Tesla', NULL),
+('Stephen Hawking', NULL);
